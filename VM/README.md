@@ -68,5 +68,66 @@ Nothing.
 
 Nothing before user data.
 
-### User Data:
+### Custom Data:
+
+Custom Data for app:
+
+```
+#!/bin/bash
+
+# some form of "sudo dpkg --configure -a" automation here.
+
+# update & upgrade
+sudo apt update -y
+sudo apt upgrade -y
+
+
+#install, restart, enable
+sudo apt install nginx -y
+sudo systemctl restart nginx
+sudo systemctl enable nginx
+
+# setup nginx reverse proxy
+sudo apt install sed
+# $ and / characters must be escaped by putting a backslash before them
+sudo sed -i "s/try_files \$uri \$uri\/ =404;/proxy_pass http:\/\/localhost:3000\/;/" /etc/nginx/sites-available/default
+
+sudo systemctl restart nginx
+sudo systemctl enable nginx
+
+#install tree, git
+sudo apt install tree -y
+sudo apt install git-all
+
+#install correct Nodejs version
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+#install NodeJs, pm2
+sudo apt install nodejs -y
+sudo npm install pm2 -g
+
+#Create file to store app
+mkdir nodejs_app
+
+#Move into correct folder
+cd nodejs_app
+
+#clone from repo
+git clone https://github.com/JK-A2023/Sparta_app.git
+
+#Move into correct folder
+cd Sparta_app/app
+
+#Install dependencies
+npm install -y
+
+#Run file
+pm2 start app.js
+```
+
+Custom Data for DB:
+
+```
+
+```
 

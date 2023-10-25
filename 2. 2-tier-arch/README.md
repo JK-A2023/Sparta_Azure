@@ -182,6 +182,12 @@ pm2 start app.js
 cat <file_name> | clip
 ```
 
+OR
+
+```
+scp -i ~/.ssh/file.pem ~/.ssh/file.pem ubuntu@<public_DNS>:~/.ssh
+```
+
 3. Create a file within the .ssh directory to hold the key:
 
 ```

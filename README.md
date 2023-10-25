@@ -24,8 +24,3 @@
 Azure has 22% of market share.
 
 ![img.png](images/image-1.png)
-
-## Extra Advantages of using the Cloud
-
-## How is our resources structured or organised.
-

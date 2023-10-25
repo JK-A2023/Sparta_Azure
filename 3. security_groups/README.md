@@ -1,4 +1,4 @@
-# How to configure Security Group:
+# How to configure Security Groups:
 
 1. Search in the Overview for your resource group.
    1. I filtered by my name as it's the naming convention I used for my resources.
@@ -21,3 +21,17 @@
    1. For mongoDB, follow these settings:
 
 ![img.png](images/image-3.png)
+
+# Tightening Security:
+
+1. Allow only your Subnet IP address range:
+
+![img.png](images/ip_range.png)
+
+2. Input range:
+
+![img.png](images/ranges.png)
+
+3. Make sure Priority of your own rules is greater (lower the number, higher the priority) than Denial rules:
+
+![img.png](images/denial.png)

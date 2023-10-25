@@ -1,6 +1,6 @@
-# How to set up a VM in Azure:
+# How to set up 2-tier-architecture with Vnets and VM in Azure:
 
-1. Create:
+1. Create Azure Virtual Machine.
 
 ![img.png](images/image.png)
 
@@ -57,15 +57,16 @@ Standard_B1s - 1vcpu, 1GiB memory
 
 1. Virtual Network: `tech254-andrew-app-db-vnet`
 2. Subnet: `private-subnet`
-3. Select Inbound ports: SSH (22)
-4. Delte public IP and NIC when VM is deleted: Enabled.
+3. Public IP: `None`
+4. Select Inbound ports: SSH (22)
+5. Delte public IP and NIC when VM is deleted: Enabled.
 
 ### For App:
 
 5. Virtual Network: `tech254-andrew-app-db-vnet`
 6. Subnet: `public-subnet`
 7. Select Inbound ports: HTTP (80), SSH (22)
-8. Delte public IP and NIC when VM is deleted: Enabled.
+8. Delete public IP and NIC when VM is deleted: Enabled.
 
 ![img.png](images/image-5.png)
 
@@ -165,3 +166,27 @@ npm install -y
 #Run file
 pm2 start app.js
 ```
+
+## SSH'ing into VM's.
+
+### App instance:
+
+1. Use the Native SSH method to SSH into App Instance.
+
+### Database instance:
+
+1. From the App instance terminal, cd into .ssh.
+2. Copy across the azure key from local machine into app instance .ssh folder:
+
+```
+cat <file_name> | clip
+```
+
+3. Create a file within the .ssh directory to hold the key:
+
+```
+sudo nano <file_name>
+```
+
+4. Paste in the copied key, and save.
+5. Now, you can use the Native SSH method to SSH into the database instance through the App instance.

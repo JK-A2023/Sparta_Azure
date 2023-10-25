@@ -17,4 +17,15 @@
 4. Resources
    1. The resources themselves, such as VM's, virtual networks, contained within Resource Groups.
 
-![img.png](image.png)
+![img.png](images/image.png)
+
+## Market Share
+
+Azure has 22% of market share.
+
+![img.png](images/image-1.png)
+
+## Extra Advantages of using the Cloud
+
+## How is our resources structured or organised.
+

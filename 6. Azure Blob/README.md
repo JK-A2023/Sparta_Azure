@@ -26,10 +26,10 @@ Containers have frequency tiers depending on how often they're accessed. In orde
 
 Local Redundancy Storage stores 3 versions of the storage account within one Availability Zone.
 
-![Alt text](image-1.png)
+![Alt text](images/image-1.png)
 
 ## ZRS
 
 Zone Redundancy Storage stores 3 versions of the storage account across all 3 Availability Zones within a region (as Azure has a max of 3 regions at all times).
 
-![img.png](image.png)
+![img.png](images/image.png)

@@ -158,7 +158,7 @@ git clone https://github.com/JK-A2023/Sparta_app.git
 cd Sparta_app/app
 
 # Export the db ip for mongodb connection:
-export DB_HOST=mongodb://<database_private_ip>:27017/posts 
+# export DB_HOST=mongodb://<database_private_ip>:27017/posts 
 
 #Install dependencies
 npm install -y
